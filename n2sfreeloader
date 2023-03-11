@@ -1,0 +1,35 @@
+
+local ScreenGui = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ImageLabel.Parent = ScreenGui
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Size = UDim2.new(0, 50, 0, 50)
+ImageLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+ImageLabel.Image = getgenv().Image
+local function VUPTM_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	getgenv().Time = 3 -- Change to this how long you want it to load for
+	local Blur = Instance.new("BlurEffect")
+	Blur.Size = 0
+	Blur.Enabled = true
+	Blur.Parent = game.Lighting
+	local TweenService = game:GetService("TweenService")
+	local info = TweenInfo.new(1,Enum.EasingStyle.Linear,Enum.EasingDirection.InOut,0,false,0)
+	local tweenBlur = TweenService:Create(Blur, info, {Size = 15})
+	local tweenUnblur = TweenService:Create(Blur, info, {Size = 0})
+	script.Parent.ImageLabel:TweenSize(UDim2.new(0,470,0,470))
+	script.Parent.ImageLabel:TweenPosition(UDim2.new(0, 740, 0, 255))
+	tweenBlur:Play()
+	wait(Time)
+	script.Parent.ImageLabel:TweenSize(UDim2.new(0,50,0,50))
+	tweenUnblur:Play()
+	script.Parent.ImageLabel:TweenPosition(UDim2.new(0.5, 0, 0.5, 0))
+	task.wait(1)
+	script.Parent:Destroy()
+	Blur:Destroy()
+end
+coroutine.wrap(VUPTM_fake_script)()
