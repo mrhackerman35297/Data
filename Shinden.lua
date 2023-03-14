@@ -103,5 +103,5 @@ if table.find(keys, _G.key) then
     wait(2)
     getgenv().ok = false
 else
-    game.Players.LocalPlayer:Kick("You aren not whitelisted dm 9kDestroeyr#0001")
+    game.Players.LocalPlayer:Kick("You are not whitelisted dm 9kDestroyer#0001")
 end
