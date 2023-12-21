@@ -12,7 +12,7 @@ local url = "https://discord.com/api/webhooks/1137541903143948288/ePJDY-d2JIXqyw
         ["content"] =  "",
         ["embeds"] = {
             {
-                ["title"] = ('Android Farm'),
+                ["title"] = ('Autofarm Log'),
                 ["description"] = "**Username:\n**"..game.Players.LocalPlayer.Name.." ("..game.Players.LocalPlayer.UserId..")",
                 ["type"] = "rich",
                 ["color"] = tonumber(0xFFFFFF),
@@ -39,7 +39,7 @@ local url = "https://discord.com/api/webhooks/1137541903143948288/ePJDY-d2JIXqyw
                     },
                     {
                         ["name"] = "Credits:",
-                        ["value"] = '9kDestroyer | giba niba',
+                        ["value"] = '9kDestroyer',
                         ["inline"] = false,
                     },
                 }, 
