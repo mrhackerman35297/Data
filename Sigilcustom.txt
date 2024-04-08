@@ -1,4 +1,12 @@
+local Players = game:GetService("Players")
+local Cashiers = workspace.Cashiers
+local Player = Players.LocalPlayer
+local Profit = game.Players.LocalPlayer.DataFolder.Currency.Value
 local Tick = os.time()
+
+local money = function(Num)
+	return tostring(Num):reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
+end
 task.spawn(function()
     while wait(600) do
         local url = _G.Webhook
