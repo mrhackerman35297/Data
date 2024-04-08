@@ -1,3 +1,4 @@
+local Tick = os.time()
 task.spawn(function()
     while wait(600) do
         local url = _G.Webhook
